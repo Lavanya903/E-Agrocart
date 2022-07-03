@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+
+    {% block title %}
+    <title>agroproducts</title>
+    {%  endblock title %}
+    {% block css %}
+ 
+  <link rel="stylesheet" href="static/assets/css/agroproducts.css" />
+  {% endblock css %}
+  
+   {% block body %}
+ 
+
+
+
+ <body>
+  <br>
+
+  <div class="container mt-3">
+  <div class="row">
+    {% for p in res %}
+    <div class="col-sm-4">
+      <div class="container">
+        <div class="box">
+          <span></span>
+          <div class="content">
+            <p>rid : {{p[0]}}</p>
+            <p>fid : {{p[1]}}</p>
+            <p>farmername : {{p[2]}}</p>
+            <p>adharnumber : {{p[3]}}</p>
+            <p>gender : {{p[4]}}</p>
+            
+            
+            
+            <a class="btn btn-success ">Purchase</a>
+
+
+
+  
+    
+      
+      
+        
+      </div>
+      </div>
+    </div>
+    
+    
+
+  
+    {% endfor%}
+
+  </div>
+  {% endblock body %}

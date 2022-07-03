@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Navbar Animation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="static\assets\css\vieworders.css" />
+    
+  </head>
+  <body>
+      <div class="container">
+        {% for p in res %}
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2></h2>
+                    <p>Buyer Name :{{p[0]}} </p>
+                    <p>Product Name:{{p[1]}} </p>
+                    <p>Quantity:1</p>
+                    <a href="/dispatch">DISPATCH</a>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+        
+        {% endfor  %} 
+        <a href="/farmerhome">HOME</a>
+        </div> 
+  </body>
+  </html>

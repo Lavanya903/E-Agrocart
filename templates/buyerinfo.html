@@ -1,0 +1,74 @@
+
+
+    {% block title %}
+    <title>REGISTER FARMER</title>
+    {%  endblock title %}
+    {% block css %}
+    <link rel="stylesheet" href="static\assets\css\buyerinfo.css" />
+    {% endblock css %}
+  
+  {% block body %}
+  <body>
+    <form action="/buyerinfo" method="post" >
+      <section>
+          <div class="container">
+              <h2>ADD YOUR DETAILS</h2>
+          
+          <div class="row100">
+              <div class="col">
+              <div class="inputBox">
+                  <input type="text"  required="required" id="name" name="name">
+                  <span class="text">FIRST NAME</span>
+                  <span class="line"></span>
+
+              </div>
+          </div>
+          <div class="col">
+            <div class="inputBox">
+                <input type="int" name="bid" required="required" id="bid">
+                <span class="text">bid</span>
+                <span class="line"></span>
+
+            </div>
+        </div>
+        </div>
+        <div class="row100">
+            <div class="col">
+            <div class="inputBox">
+                <input type="text" name="email" id="email" required="required">
+                <span class="text">EMAIL</span>
+                <span class="line"></span>
+
+            </div>
+        </div>
+        <div class="col">
+          <div class="inputBox">
+              <input type="text" name="mobile" id="mobile" required="required">
+              <span class="text">MOBILE</span>
+              <span class="line"></span>
+
+          </div>
+      </div>
+      </div>
+
+      <div class="row100">
+        <div class="col">
+        <div class="inputBox textarea">
+            <textarea name="address" id="address"required="required"></textarea>
+            <span class="text">Enter your address</span>
+            <span class="line"></span>
+
+        </div>
+        </div>
+    </div>
+    <div class="row100">
+        <div class="col">
+            <input type="submit" value="send">
+        </div>
+    </div>
+</div>
+
+    </section>
+    <a href="/buyerhome">Home</a>
+
+    {% endblock body %}

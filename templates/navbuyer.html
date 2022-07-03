@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    
+<title>
+{%  block title %}
+{%  endblock title %}
+</title>
+
+
+
+
+<link rel="stylesheet"type="text/css" href="static\assets\css\navbar1.css" />
+{% block css %}
+{% endblock css %}
+    
+     
+
+
+</head>
+<body>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <b></b>
+                <b></b>
+                <a href="/buyerhome">
+                    <span class="icon"><ion-icon name="home"></ion-icon></span>
+                    <span class="title">home</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="/buyerinfo">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <span class="title">profile</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="/agro">
+                    <span class="icon"><ion-icon name="pricetag"></ion-icon></span>
+                    <span class="title">viewproduct</span>
+                </a>
+            </li>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="/cart1">
+                    <span class="icon"><ion-icon name="cart"></ion-icon></span>
+                    <span class="title">cart</span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="toggle">
+        <ion-icon name="menu" class="open"></ion-icon>
+        <ion-icon name="close" class="close"></ion-icon>
+    </div>
+   
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="static/assets/js/nav.js"></script>
+    
+        
+    
+
+   
+
+    
+   
+    {% block body %}
+    {% endblock body %}  
+     
+</body>
+</html>

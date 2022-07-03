@@ -1,0 +1,79 @@
+{% extends 'navbuyer.html' %}
+     
+         {% block title %}
+         <title>agroproducts</title>
+         {%  endblock title %}
+         {% block css %}
+      
+       <link rel="stylesheet" href="static/assets/css/agroproducts.css" />
+        
+       <link rel="stylesheet" href="static/assets/css/cart.css" />
+       
+       {% endblock css %}
+       
+       {% block body %}
+       
+       <div class="small-container cart-page">
+            <table>
+                 <tr>
+                      <th>Product</th>
+                      <th>Quantity</th>
+                     
+                 </tr>
+                 {% for p in res1 %}
+                 <tr>
+                      <td>
+                           <div class="cart-info">
+                                <div>
+                                     <p>Productname: {{p[0]}}</p>
+                                     <small>Price : {{p[1]}}</small>
+                                     <p>name:{{p[2]}}</p>
+
+
+								
+            
+              
+                                    <div class="cart-action">
+                                    <form method="post" action="/order">
+                                     <input type="hidden" name="productname" value="{{p[0]}}">
+                                     <button type="submit" class="btn" value="ordernow" >order now</button>
+                                 </div>
+            
+          
+
+      </div>
+      </div>
+    </form>
+	 
+	<td><input type="number"  value="1"></td>
+                    
+                     
+                      
+                      
+	<br>
+  
+</tr>
+    </div>
+
+    
+    
+
+  
+    {% endfor%}
+	   
+</table>
+<div class="total-price">
+	 <table>
+		  <tr>
+			   
+			   
+		  </tr>
+		  <tr>
+		  <td>total</td>
+			   <td>{{t}}</td>
+		  </tr>
+	 </table>
+	 
+	<a href="/transaction">place order</a>
+  
+  {% endblock body %}

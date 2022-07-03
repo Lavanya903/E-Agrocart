@@ -1,0 +1,200 @@
+<html>
+    <head>
+    <title>dashboard</title>
+  
+    
+    
+    <link rel="stylesheet" href="static\assets\css\dashboard.css" />
+    </head>
+  <body>
+      <div class="container">
+          <div class="navigation">
+              <ul>
+                  <li>
+                    <a href="/">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">HOME</span>
+                    </a>
+                  </li>
+                  <li>
+                  <a href="#">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <span class="title">VIEW FARMERS</span>
+                  </a>
+                </li>
+                <li>
+                    <a href="#">
+                      <span class="icon"><ion-icon name="person"></ion-icon></span>
+                      <span class="title">VIEW CUSTOMERS</span>
+                    </a>
+                  </li>
+                <li>
+                    <a href="/agro">
+                        <span class="icon"><ion-icon name="pricetag"></ion-icon></span>
+                        <span class="title">AGRO PRODUCTS</span>
+                    </a>
+                </li>
+                
+                <ul>
+          </div>
+          <div class="main">
+              <div class="topbar">
+                  <div class="toggle">
+                    <ion-icon name="menu" class="open"></ion-icon>
+
+                  </div>
+                  <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search">
+                        <ion-icon name="search" ></ion-icon>
+                    </label>
+                </div>
+
+              </div>
+          
+      
+      <div class="cardBox">
+          <div class="card">
+              <div>
+                  <div class="numbers">{{res}}</div>
+                  <div class="cardName">REGISTRED FARMER</div>
+              </div>
+              <div class="iconBx">
+                <ion-icon name="eye"></ion-icon>
+                  
+
+          </div>
+        </div>
+        <div class="card">
+            <div>
+                <div class="numbers">{{res4}}</div>
+                <div class="cardName">Sales</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="cart"></ion-icon>
+
+        </div>
+      </div>
+      <div class="card">
+        <div>
+            <div class="numbers">{{res1}}</div>
+            <div class="cardName">BUYER REGISTRED</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="eye"></ion-icon>
+
+        </div>
+      </div>
+      <div class="card">
+        <div>
+            <div class="numbers">{{res5}}</div>
+            <div class="cardName">Earnings</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="cash"></ion-icon>
+
+    </div>
+  </div>
+</div>
+
+<!--order details list -->
+
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2> FARMER LIST</h2>
+            <a href="#" class="btn">view all</a>
+
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>rid</td>
+                    <td>fid</td>
+                    <td>farmername</td>
+                    <td>addharnumber</td>
+                    <td>age</td>
+                    <td>gender</td>
+                    <td>farming</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in res3 %}
+                <tr>
+                    <td>{{p[0]}}</td>
+                    <td>{{p[1]}}</td>
+                    <td>{{p[2]}}</td>
+                    <td>{{p[3]}}</td>
+                    <td>{{p[4]}}</td>
+                    <td>{{p[5]}}</td>
+                    <td>{{p[6]}}</td>
+ 
+                </tr>
+                {% endfor%}
+                
+
+            </tbody>
+        </table>
+    </div>
+    <!--new customer-->
+    <div class="recentCustomers">
+        <div class="cardHeader">
+            <h2> BUYER LIST</h2>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>CUSTOMER Name</td>
+                    <td>MOBILE</td>
+                    <td>address</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in res2 %}
+                <tr>
+                    <td>{{p[0]}}</td>
+                    <td> {{p[1]}}</td>
+                    <td> {{p[2]}}</td>
+                </tr>
+              {% endfor%}
+            </tbody>
+        </table>
+    </div>
+
+
+
+</div>
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+
+<script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+<script>
+    //menu toggle
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation')
+    let main = document.querySelector('.main')
+    toggle.onclick = function() {
+        navigation.classList.toggle('active');
+        main.classList.toggle('active');
+    }
+</script>
+<script>
+    //add hovered class in selected list item
+    let list = document.querySelectorAll('.navigation li');
+    function activeLink(){
+        list.forEach((item) =>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+        
+
+    }
+    list.forEach((item) =>
+    item.addEventListener('mouseover',activeLink));
+</script>
+    
+</div>
+</div>
+</body>
+</html>

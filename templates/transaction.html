@@ -1,0 +1,65 @@
+
+    {% block title %}
+    <title>REGISTER FARMER</title>
+    {%  endblock title %}
+    {% block css %}
+    <link rel="stylesheet" href="static\assets\css\transaction.css" />
+    {% endblock css %}
+  
+  {% block body %}
+
+<body>
+  <div class="container">
+    <div class="title">SHIPPING ADDRESS</div>
+    <div class="content">
+      <form action="/farmerregister" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"> Name</span>
+            <input type="text" placeholder="name" id="name" name="name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">age</span>
+            <input type="text" placeholder="age" id="age" name="age" required>
+          </div>
+          <div class="input-box">
+            <span class="details">gender</span>
+            <input type="text" placeholder="gender" id="gender" name="gender" required>
+          </div>
+          <div class="input-box">
+            <span class="details">phonenumber</span>
+            <input type="text" placeholder="phonenumber" id="phonenumber" name="phonenumber" required>
+          </div>
+          <div class="input-box">
+            <span class="details">state</span>
+            <input type="text" placeholder="state" id="state" name="state" required>
+          </div>
+          <div class="input-box">
+            <span class="details">city</span>
+            <input type="text" placeholder="city" id="city" name="city" required>
+          </div>
+          <div class="input-box">
+            <span class="details">ADDRESS</span>
+            <input type="text" placeholder="address" id="address" name="address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">landmark</span>
+            <input type="text" placeholder="landmark" id="landmark" name="landmark">
+          </div>
+        </div>
+        <div>
+          <li><a href="/card">PROCEED TO PAYEMENT</a></li>
+        </div>
+        
+
+       
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+      
+  
+  {% endblock body %}

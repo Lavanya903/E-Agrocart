@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+
+}
+body {
+    display: flex;
+    justify-content: auto;
+    
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+.container .box {
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: white;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+}
+.container .box:hover {
+    transform: translateY(-20px);
+}
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left : 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+    /*border-radius: 8px;
+    
+    /*transition: 0.5s;*/
+
+
+}
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left :0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+    filter: blur(30px);
+   
+
+
+}
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after
+{
+   background: linear-gradient(315deg,#12a0e2,#ff0058);
+}
+.container .box:nth-child(n)::before,
+.container .box:nth-child(n)::after
+{
+   background: linear-gradient(315deg,#4dff03,#00b7ff);
+}
+.container .box span {
+    
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    background: none;
+    background: rgba(255,255,255,0.1);
+    z-index: 2;
+    pointer-events: none;
+}
+.container .box span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:none ;
+    
+    background: rgba(255,255,255,0.1);
+    
+    pointer-events: none;
+    
+}
+.container .box .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+.container .box .content h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+}
+.container .box .content p {
+    font-size: 1.2 rem;
+    color: black;
+    margin-bottom: 10px;
+    line-height: 1.4rem;
+
+}
+.container .box .content a {
+    display: inline-block;
+    font-size: 1.1rem;
+    color: #111;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 5px;
+    pointer-events: cursor;
+}
+.container .box .content td {
+
+    padding: 10px 5px;
+}
+.container .box .content td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+.container .box .content .cart-action .btn 
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #1fd9df, #0ef535);
+}

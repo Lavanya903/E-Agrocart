@@ -1,0 +1,65 @@
+{% extends 'navbar.html' %}
+
+    {% block title %}
+    <title>REGISTER FARMER</title>
+    {%  endblock title %}
+    {% block css %}
+    <link rel="stylesheet" href="static\assets\css\addproducts.css" />
+    {% endblock css %}
+  
+  {% block body %}
+  <body>
+    <form action="/addagroproducts"  method="POST">
+    <section>
+     <div class="color"></div>
+     <div class="color"></div>
+     <div class="color"></div>
+     <div class="box">
+         <div class="square" style="--i:0;"></div>
+         <div class="square" style="--i:1;"></div>
+         <div class="square" style="--i:2;"></div>
+         <div class="square" style="--i:3;"></div>
+         <div class="square" style="--i:4;"></div>
+         
+         
+      <div class="container">
+          <div class="form" >
+              <h2>add details</h2>
+              <form>
+                  <div class ="inputbox">
+                      <input type="text" class="form-control" placeholder="username" id="username" name="username">
+                  </div>
+                  <div class ="inputbox">
+                    <input type="email" class="form-control" placeholder="email" id="email" name="email">
+                </div>
+                <div class ="inputbox">
+                    <input type="number" class="form-control" placeholder="pid" id="pid" name="pid">
+                </div>
+                <div class ="inputbox">
+                    <input type="text" class="form-control" placeholder="productname" id="productname" name="productname">
+                </div>
+                <div class ="inputbox">
+                    <input type="text" class="form-control" placeholder="productdesc" id="productdesc" name="productdesc">
+                </div>
+                <div class ="inputbox">
+                    <input type="number" class="form-control" placeholder="price" id="price" name="price">
+                </div>
+                <div class ="inputbox">
+                    <input type="number" class="form-control" placeholder="fid" id="fid" name="fid">
+                </div>
+                <div class ="inputbox">
+                    <input type="submit" placeholder="savedetails">
+                </div>
+                   
+              </form>
+          </div>
+      </div>
+    </div>
+
+
+    </section>
+
+
+      
+  
+  {% endblock body %}

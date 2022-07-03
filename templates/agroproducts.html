@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends 'navbar.html' %}
+
+    {% block title %}
+    <title>agroproducts</title>
+    {%  endblock title %}
+    {% block css %}
+ 
+  <link rel="stylesheet" href="static/assets/css/agroproducts.css" />
+
+  {% endblock css %}
+  
+  {% block body %}
+  
+    {% for p in res1 %}
+    
+      <div class="container">
+        
+          <div class="box">
+          <span></span>
+          <div class="content">
+            <h2>productname: {{p[3]}} </h2>
+            <p>Owner : {{p[0]}}</p>
+            <p>Email : {{p[1]}}</p>
+            <p>pid:{{p[2]}}
+            
+            
+            <p>productdesc:{{p[4]}}</p>
+            <p>Price : {{p[5]}}</p>
+            
+            <div class="cart-action">
+              <form method="post" action="/cart">
+              <input type="hidden" name="pid" value="{{p[2]}}">
+              <button type="submit" class="btn" value="add to cart" >add to cart</button>
+            </div>
+            
+          
+
+
+
+  
+    
+      
+      
+        
+      </div>
+      </div>
+    </form>
+    </div>
+
+    
+    
+
+  
+    {% endfor%}
+
+  
+  {% endblock body %}

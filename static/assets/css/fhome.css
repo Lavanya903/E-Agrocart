@@ -1,0 +1,122 @@
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #f0f3f7;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    
+text-decoration: none;
+}
+body
+{
+background: url("https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500q");
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+body::before 
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("");
+    background: cover;
+    background-position: center;
+    clip-path:  circle(7% at 12% 82%);
+
+
+}
+body::after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url();
+    background: cover;
+    background-position: center;
+    clip-path: circle(19% at 70% 49%);
+
+
+}
+.container {
+    height: 90vh;
+    width: 90%;
+   
+    background: rgba(255,255,255,.5);
+    border-radius: 14px;
+    
+}
+.container .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+
+}
+.navbar {
+    width:100%;
+    height: 15vh;
+    margin:auto;
+    display: flex;
+    align-items: center;
+
+}
+.container .navbar .navitem {
+   position: relative;
+   right: 2rem;
+
+
+}
+.container .navbar .navitem li {
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 14px;
+    align-items: center;
+
+}
+.container .navbar .navitem li:hover {
+    background: #fff;
+}
+.container .navbar .navitem li:hover a{
+    background: #fff;
+}
+.container .navbar .navitem li a {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    align-items: center;
+}
+.container .container-body {
+    display: grid;
+    grid-template-columns: repeat(2,50);
+    grid-template-rows: 100%;
+}
+.container .container-body .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.container .container-body .left .title
+{
+    text-align: left;
+    width: 80%;
+    position: absolute;
+    top: 3em;
+    left: 2em;
+    font-size: 17;
+    color: var(--primary-color);
+}
